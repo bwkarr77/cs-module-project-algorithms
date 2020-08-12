@@ -7,6 +7,14 @@ Item = namedtuple('Item', ['index', 'size', 'value'])
 
 def knapsack_solver(items, capacity):
     # Your code here
+    items.sort(key=lambda x: x.value, reverse=True)
+    # would be better if we sorted by value/weight ratio...
+    sack = []
+    cur_weight = 0
+
+    for i in range(items):
+      if cur_weight + items[i].weight <= capacity:
+        sack.append(items[i])
 
     pass
 
