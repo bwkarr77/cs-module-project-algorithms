@@ -4,8 +4,17 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
+    n = len(nums)-k+1
+    res = [0]*n
 
-    pass
+    for i in range(0, n):
+        m = nums[i]
+        for j in range(i+1, k+i, 1):
+            if nums[j] > m:
+                m = nums[j]
+        res[i] = m
+
+    return res
 
 
 if __name__ == '__main__':
