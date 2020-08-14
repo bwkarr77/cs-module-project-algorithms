@@ -12,7 +12,7 @@ class Test(unittest.TestCase):
 
     def test_sliding_window_max_2(self):
         arr = [1, 3, -1, -3, 5, 3, 6, 7]
-        k = 2  
+        k = 2
         output = sliding_window_max(arr, k)
         expected = [3, 3, -1, 5, 5, 6, 7]
 
