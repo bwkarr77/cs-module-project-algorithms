@@ -2,6 +2,8 @@
 Input: a List of integers as well as an integer `k` representing the size of the sliding window
 Returns: a List of integers
 '''
+
+# need to fine tune so it can handle larger inputs
 def sliding_window_max(nums, k):
     # Your code here
     n = len(nums)-k+1
@@ -15,6 +17,8 @@ def sliding_window_max(nums, k):
         res[i] = m
 
     return res
+
+
 
 
 if __name__ == '__main__':
